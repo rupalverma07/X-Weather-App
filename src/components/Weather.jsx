@@ -12,7 +12,7 @@ const Weather = () => {
             setIsLoading(true)
             const res =  await fetch(`http://api.weatherapi.com/v1/current.json?q=${inputValue}&key=${apiKey}`);
             const data = await res.json();
-            if(data.error.code === 1006){
+            if(data?.error?.code === 1006){
                 alert('failed to fetch weather data')
                 setIsLoading(false)
                 return ;
