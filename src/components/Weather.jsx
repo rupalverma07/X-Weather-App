@@ -35,7 +35,7 @@ const Weather = () => {
         <input type='text' value={inputValue} onChange={(e) => setInputValue(e.target.value)} />
         <button onClick={searchHandler}>Search</button>
         </div>
-        {isLoading ? (<div style={{marginTop:"20px"}}>Loading data...</div>) : (null)}
+        {isLoading ? (<p style={{marginTop:"20px"}}>Loading data...</p>) : (null)}
         {showCard ? (<div className='weather-cards'>
             <div className='weather-card'>
                 <h5>Temperature</h5>
